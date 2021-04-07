@@ -1,0 +1,14 @@
+$color-header-primary:#bcd6db;
+.App{
+    margin: 0px;
+    box-sizing: border-box;
+    padding: 0px;
+
+    .navigation{
+        background-color:$color-header-primary;
+        border-radius: 15px;
+        &__img{
+            padding: 2px 10px;
+        }
+    }
+}

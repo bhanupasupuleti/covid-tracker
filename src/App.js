@@ -1,22 +1,22 @@
 import React from 'react';
-import { Switch, Route, BrowserRouter } from "react-router-dom";
+import {Route, BrowserRouter } from "react-router-dom";
 import {Navigation} from './components/navigation';
 
 import './App.scss'
+import Home from './pages/home';
+// import {allPropsHoc} from './HOC/hightordercomponents'
 
 
-const allTabs = ['/', '/india', '/indiastatewise'];
+const allTabs = ['/', '/global', '/indiastatewise'];
 class App extends React.Component{
   render(){
     return(
-      <div>
+      <div className='App'>
         <BrowserRouter>
-            <Navigation/>
-            <Switch>
-                <Route path={allTabs[1]} render={() => <div>Tab 2</div>} />
-                <Route path={allTabs[2]} render={() => <div>Tab 3</div>} />
-                <Route path={allTabs[0]} render={() => <div>Tab 1</div>} />
-              </Switch>
+        <div>
+          <Route path="/" component={Navigation} />
+          <Route path="/" component={Home} />
+        </div>
         </BrowserRouter>
       </div>
     )
