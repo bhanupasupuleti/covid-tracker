@@ -13,12 +13,12 @@ export function Navigation({allTabs=['/', '/global', '/indiastatewise']}) {
         <Link to="/">
           <img src={image} alt='Logo' height='30px' width='inherit' />
         </Link>
-      </div>
+      </div >
         <Route
           path="/"
           render={({ location }) => (
             <Fragment>
-              <Tabs value={location.pathname}>
+              <Tabs TabIndicatorProps={{style: {backgroundColor: "white"}}} value={location.pathname}>
                 <Tab label="Global" value="/global" component={Link} to={allTabs[1]} />
                 <Tab label="India" value="/" component={Link} to={allTabs[0]} />
                 <Tab
