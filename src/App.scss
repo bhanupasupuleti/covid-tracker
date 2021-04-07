@@ -10,6 +10,11 @@
 // #998c21
 
 $color-header-primary:#bcd6db;
+#root {
+    font-size: 10px;
+    font-family: "Lato",sans-serif;
+    box-sizing: border-box;
+}
 .App{
     margin: 0px;
     box-sizing: border-box;
@@ -17,9 +22,11 @@ $color-header-primary:#bcd6db;
 
     .navigation{
         background-color:$color-header-primary;
-        border-radius: 15px;
+        // border-radius: 15px;
+        border-top-left-radius :15px;
+        border-top-right-radius :15px;
         &__img{
-            padding: px 10px;
+            padding: 4px 10px;
         }
     }
 }

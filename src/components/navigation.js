@@ -18,7 +18,7 @@ export function Navigation({allTabs=['/', '/global', '/indiastatewise']}) {
           path="/"
           render={({ location }) => (
             <Fragment>
-              <Tabs TabIndicatorProps={{style: {backgroundColor: "white"}}} value={location.pathname}>
+              <Tabs TabIndicatorProps={{style: {backgroundColor: "grey"}}} value={location.pathname}>
                 <Tab label="Global" value="/global" component={Link} to={allTabs[1]} />
                 <Tab label="India" value="/" component={Link} to={allTabs[0]} />
                 <Tab
