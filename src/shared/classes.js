@@ -9,19 +9,19 @@ export const useStyles = makeStyles((theme) => ({
         width: "50%",
         margin:'20px',
         borderRadius:"10px",
-        backgroundColor:"#587058",
+        backgroundColor:"#587498",
       },
      cardRootRecoverd: {
         width: "50%",
         margin:'20px',
         borderRadius:"10px",
-        backgroundColor:"#E86850",
+        backgroundColor:"#587058",
       },
       cardRootMortality: {
         width: "50%",
         margin:'20px',
         borderRadius:"10px",
-        backgroundColor:"#587498",
+        backgroundColor:"#E86850",
       },
       bullet: {
         display: 'inline-block',
