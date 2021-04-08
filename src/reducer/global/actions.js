@@ -1,4 +1,4 @@
-import url from '../../baseurl/baseUrl';
+import {url} from '../../baseurl/baseUrl';
 export const GLOBAL_DATA='GLOBAL_DATA';
 export const COUNTRIES_LIST='COUNTRIES_LIST';
 export const DAILY_DATA='DAILY_DATA';

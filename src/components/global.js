@@ -1,7 +1,7 @@
 import React,  { useState, useEffect }  from 'react';
 import { connect } from 'react-redux';
 
-import CardsContainer from '../components/utility/CardsContainer';
+import CardsContainer from './utility/GlobalCardsContainer';
 import CountrySelect from './CountrySelect';
 import Loader from './utility/loader';
 import GlobalCharts from './globalCharts'

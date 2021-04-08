@@ -25,7 +25,7 @@ $color-header-primary:#bcd6db;
         border-top-left-radius :15px;
         border-top-right-radius :15px;
         &__img{
-            padding: 4px 10px;
+            padding: 0.4rem 1rem;
         }
     }
 }
@@ -51,6 +51,40 @@ $color-header-primary:#bcd6db;
     .chart--container {
         display: flex;
         justify-content: center;
-        padding: 0 3rem;
+        padding: 0 1.7rem;
       }
 }
+
+.India{
+    .indiaFlexContainer{
+        display: flex;
+        padding:.5rem;
+        .logs {
+            width: 26%;
+            padding: inherit;
+            &-notificationLabel{
+            color:rgb(42, 199, 204);
+               text-align: center;
+               font-size: 1.7rem;
+            }
+          }
+          .indiaFlexContainer-right{
+              padding: inherit;
+              width: 100&;
+            //   background-color: pink;
+              .Cards-Container{
+                position: relative;
+                display: flex;
+                text-align: center;
+            }
+          }
+    }
+}
+
+@media (max-width: 800px) {
+    .India{
+        .indiaflexContainer {
+          flex-direction: column;
+        }        
+    }
+  }

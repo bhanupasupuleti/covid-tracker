@@ -5,26 +5,24 @@ import CountUp from 'react-countup';
 
 import {useStyles} from '../../shared/classes'
 
-export default function SimpleCard({className,name,value,lastUpdate=''}) {
+export default function SimpleCard({className,name,secondName,value,lastUpdate='',value2}) {
   const classes = useStyles();
   return (
-    // <Card className={classes.cardRoot}>
     <div className={classes[className]} >
       <CardContent>
         <Typography className={classes.title} color="textSecondary" gutterBottom>
-         {`Total ${name}`}
+         {name}
         </Typography>
         <Typography  className={classes.title}>
           <CountUp start={0} duration={1} end={value} />
         </Typography>
         <Typography  className={classes.title}>
-          Last Updated
+          {secondName}
         </Typography>
         <Typography className={classes.title}>
-         {new Date(lastUpdate).toDateString()}
+         {lastUpdate?new Date(lastUpdate).toDateString():<CountUp start={0} duration={1} end={value2} />}
         </Typography>
       </CardContent>
     </div>
-    // </Card>
   );
 }
