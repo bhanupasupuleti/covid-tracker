@@ -9,13 +9,13 @@ class Home extends React.Component{
     }
     render(){
         return(
-        <div>
+        <div className='Home'>
             <Switch>
                 <Route exact path={this.state.allTabs[0]} render={() => <div><India /></div>} />
                 <Route path={this.state.allTabs[1]} render={() => <div><Global /></div>} />
                 <Route path={this.state.allTabs[2]} render={() => <div><IndiaStateWise /></div>} />
               </Switch>
-            </div>
+        </div>
         )
     }
 }

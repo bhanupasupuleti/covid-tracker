@@ -1,14 +1,14 @@
 import React from 'react';
 
-import Card from '../components/utility/CardsContainer';
+import CardsContainer from '../components/utility/CardsContainer';
 
 
 
 class Global extends React.Component{
     render(){
         return(
-            <div>
-                <Card/>
+            <div className="Global">
+                <CardsContainer/>
             </div>
         )
     }

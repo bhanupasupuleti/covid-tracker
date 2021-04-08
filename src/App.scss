@@ -30,3 +30,11 @@ $color-header-primary:#bcd6db;
         }
     }
 }
+
+.Global{
+    .Cards-Container{
+        position: relative;
+        display: flex;
+        text-align: center;
+    }
+}
