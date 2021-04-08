@@ -1,6 +1,7 @@
 import React from 'react';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
+import CountUp from 'react-countup';
 
 import {useStyles} from '../../shared/classes'
 
@@ -13,14 +14,14 @@ export default function SimpleCard({className,name,value,lastUpdate=''}) {
         <Typography className={classes.title} color="textSecondary" gutterBottom>
          {`Total ${name}`}
         </Typography>
-        <Typography>
-          {value}
+        <Typography  className={classes.title}>
+          <CountUp start={0} duration={1} end={value} />
         </Typography>
-        <Typography className={classes.pos} color="textSecondary">
+        <Typography  className={classes.title}>
           Last Updated
         </Typography>
-        <Typography variant="body2" component="p">
-         {lastUpdate}
+        <Typography className={classes.title}>
+         {new Date(lastUpdate).toDateString()}
         </Typography>
       </CardContent>
     </div>

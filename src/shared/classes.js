@@ -23,17 +23,16 @@ export const useStyles = makeStyles((theme) => ({
         borderRadius:"10px",
         backgroundColor:"#E86850",
       },
-      bullet: {
-        display: 'inline-block',
-        margin: '0 2px',
-        transform: 'scale(0.8)',
-      },
       title: {
-        fontSize: "1.7rem",
+        fontSize: "1.4rem",
         color:'white',
-        fontWeight:'500'
+        fontWeight:'400'
       },
       pos: {
         marginBottom: 12,
       },
+       backdrop: {
+      zIndex: theme.zIndex.drawer + 1,
+      color: '#bcd6db',
+  },
   }));

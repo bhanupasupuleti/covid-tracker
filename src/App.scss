@@ -22,7 +22,6 @@ $color-header-primary:#bcd6db;
 
     .navigation{
         background-color:$color-header-primary;
-        // border-radius: 15px;
         border-top-left-radius :15px;
         border-top-right-radius :15px;
         &__img{
@@ -37,4 +36,21 @@ $color-header-primary:#bcd6db;
         display: flex;
         text-align: center;
     }
+    .country-select{
+        text-align: center;
+        font-family: inherit;
+        .country__select{
+                border: none;
+                background-color: #fff;
+                outline: none;
+                border-bottom: 2px solid  #998c21;
+                font-size: 1rem;
+                padding: 0.5rem;
+            }
+    }
+    .chart--container {
+        display: flex;
+        justify-content: center;
+        padding: 0 3rem;
+      }
 }
