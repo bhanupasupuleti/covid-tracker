@@ -1,11 +1,10 @@
 import React from 'react';
-import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 
 import {useStyles} from '../../shared/classes'
 
-export default function SimpleCard({className,name,value=1000,lastUpdate='last Updated'}) {
+export default function SimpleCard({className,name,value,lastUpdate=''}) {
   const classes = useStyles();
   return (
     // <Card className={classes.cardRoot}>

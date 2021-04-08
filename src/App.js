@@ -5,9 +5,6 @@ import {Navigation} from './components/navigation';
 import './App.scss'
 import Home from './pages/home';
 // import {allPropsHoc} from './HOC/hightordercomponents'
-
-
-const allTabs = ['/', '/global', '/indiastatewise'];
 class App extends React.Component{
   render(){
     return(
