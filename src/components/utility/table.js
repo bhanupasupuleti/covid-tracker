@@ -1,46 +1,48 @@
 import React from "react";
-const StateTable = ({ stateWise:stateWiseData, setselectState }) => {
-    console.log(stateWiseData)
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableHead from '@material-ui/core/TableHead';
+import TableRow from '@material-ui/core/TableRow';
+
+import {useStyles,StyledTableCell,StyledTableRow} from '../../shared/classes'
+
+const StateTable = (props) => {
+  const {stateWise,setselectState}=props;
+  const classes=useStyles()
   return (
-    <div className="stateCont">
-      <h2 className="heading--secondary textCenter">State wise Data</h2>
-      <table className="stateTable">
-        <thead>
-          <tr className="stateTableHeadings">
-            <th className="tableStateHeading">SNO</th>
-            <th className="tableStateHeading">State / UT</th>
-            <th className="tableStateHeading">Confirmed</th>
-            <th className="tableStateHeading">Recovered</th>
-            <th className="tableStateHeading">Active</th>
-            <th className="tableStateHeading">Dead</th>
-          </tr>
-        </thead>
-        <tbody>
-          {stateWiseData.map((stateD, i) => (
-            <tr
-              key={stateD.state}
-              className="tbodyContainer"
-              onClick={() =>
-                stateD.state === "Total"
-                  ? null
-                  : setselectState([
-                      stateD.state,
-                      stateD.statecode.toLowerCase(),
-                    ])
-              }
-            >
-              <td className="tableBody">{stateD.state === "Total" ? "" : i}</td>
-              <td className="tableBody">{stateD.state}</td>
-              <td className="tableBody">{stateD.confirmed}</td>
-              <td className="tableBody">{stateD.recovered}</td>
-              <td className="tableBody">{stateD.active}</td>
-              <td className="tableBody">{stateD.deaths}</td>
-            </tr>
+    <div className="state__Table-Container">
+      <h2 className='table-label'>State wise Data</h2>    
+      <Table className={classes.table} aria-label="customized table">
+        <TableHead>
+          <TableRow>
+            <StyledTableCell>SNO</StyledTableCell>
+            <StyledTableCell align="left">State / UT</StyledTableCell>
+            <StyledTableCell align="center">Confirmed</StyledTableCell>
+            <StyledTableCell align="center">Recovered</StyledTableCell>
+            <StyledTableCell align="center">Active</StyledTableCell>
+            <StyledTableCell align="center">Dead</StyledTableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {stateWise.slice(0,stateWise.length-1).map((row,i) => (
+            <StyledTableRow key={row.state} onClick={() =>row.state === "Total"? null: setselectState([row.state,row.statecode.toLowerCase()])
+            }>
+              <StyledTableCell component="th" scope="row">
+                 {row.state === "Total" ? "" : i}
+              </StyledTableCell>
+              <StyledTableCell style={{maxWidth:'20rem'}} align="left">{row.state}</StyledTableCell>
+              <StyledTableCell align="center">{row.confirmed}</StyledTableCell>
+              <StyledTableCell align="center">{row.recovered}</StyledTableCell>
+              <StyledTableCell align="center">{row.active}</StyledTableCell>
+              <StyledTableCell align="center">{row.deaths}</StyledTableCell>
+            </StyledTableRow>
           ))}
-        </tbody>
-      </table>
+        </TableBody>
+      </Table>
+  
     </div>
-  );
-};
+  )
+
+}
 
 export default StateTable;

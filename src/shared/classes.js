@@ -1,4 +1,7 @@
-import {makeStyles} from '@material-ui/core';
+import {makeStyles,withStyles} from '@material-ui/core';
+import TableRow from '@material-ui/core/TableRow';
+import TableCell from '@material-ui/core/TableCell';
+
 export const useStyles = makeStyles((theme) => ({
     tabsIndicator:{
         style: {
@@ -24,6 +27,11 @@ export const useStyles = makeStyles((theme) => ({
         backgroundColor:"#E86850",
       },
       title: {
+        fontSize: "1.4rem",
+        color:'white',
+        fontWeight:'400'
+      },
+      titleState: {
         fontSize: "1.4rem",
         color:'white',
         fontWeight:'400'
@@ -63,5 +71,44 @@ export const useStyles = makeStyles((theme) => ({
         margin:'2rem',
         borderRadius:"10px",
         backgroundColor:"#E86850",
-      }
+      },
+      table: {
+        width:'95%',
+        margin:'1rem'
+      },
+      cardRootStateConfirmed:{
+        width: "65%",
+        margin:'2rem',
+        borderRadius:"10px",
+        backgroundColor:"#587498",
+      },
   }));
+
+  export const StyledTableCell = withStyles((theme) => ({
+    head: {
+      backgroundColor: theme.palette.common.black,
+      color: theme.palette.common.white,
+    },
+    body: {
+      fontSize: 14,
+    },
+  }))(TableCell);
+
+  export const StyledTableRow = withStyles((theme) => ({
+    root: {
+      '&:nth-of-type(odd)': {
+        backgroundColor: theme.palette.action.hover,
+      },
+      '&:hover':{
+        backgroundColor:'#bcd6db',
+        cursor:'pointer'
+      }
+    },
+  }))(TableRow);
+  export const StyledTableRowDistrict = withStyles((theme) => ({
+    root: {
+      '&:nth-of-type(odd)': {
+        backgroundColor: theme.palette.action.hover,
+      },
+    },
+  }))(TableRow);
