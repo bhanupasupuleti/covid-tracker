@@ -58,9 +58,9 @@ $color-header-primary:#bcd6db;
 .India{
     .indiaFlexContainer{
         display: flex;
-        padding:.5rem;
+        // padding:.5rem;
         .logs {
-            width: 26%;
+            width: 30%;
             padding: inherit;
             &-notificationLabel{
             color:rgb(42, 199, 204);
@@ -68,16 +68,63 @@ $color-header-primary:#bcd6db;
                font-size: 1.7rem;
             }
           }
-          .indiaFlexContainer-right{
-              padding: inherit;
-              width: 100&;
-            //   background-color: pink;
-              .Cards-Container{
-                position: relative;
-                display: flex;
+          .daily-data-container{
+            //   padding: inherit;
+              width: 100%;
+              margin-left: 2rem;
+              .daily-data__activeLabel{
+                  color:rgb(24, 42, 43);
+                  text-align: center;
+                  font-size: 1.6rem; 
+                  font-weight: 100;
+              }
+                .monthly-chart{
+                    width: 70%;
+                }
+                .monthly-data__Label{
+                color:rgb(24, 42, 43);
                 text-align: center;
+                font-size: 1.6rem; 
+                font-weight: 100;
+
+                }
+              .Cards-Container{
+                  position: relative;
+                  display: flex;
+                  text-align: center;
             }
           }
+    }
+    .india__chart{
+        .chartHeading{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .daily--chart-label{
+                padding: 0 2rem;
+            }
+            .switchContainer{
+                list-style: none;
+                padding: 0.5rem 1rem;
+                display: inline-flex;
+                width: auto;
+                border-radius: 50px;
+                background-color: #216f9371;
+                .dailyChart {
+                    margin: 0 1.2rem;
+                    padding: 0.8rem 1.3rem;
+                    font-size: 1rem;
+                    color: #fff;
+                    cursor: pointer;
+                    transition: background-color 0s ease-in-out 0.5s,
+                      border-radius 0s ease-in-out 0.5s;
+                      &.active{
+                        background-color: #182142;
+                        border-radius: 50px;
+                      }
+                  }
+            }
+        }
     }
 }
 
