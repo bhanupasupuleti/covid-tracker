@@ -3,7 +3,7 @@ import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import { Route, Link } from "react-router-dom";
 
-import image from '../resources/image.png'
+import image from '../../resources/image.png'
 
 
 export function Navigation({allTabs=['/', '/global', '/indiastatewise']}) {

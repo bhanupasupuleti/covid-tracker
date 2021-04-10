@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-import CardsContainer from './utility/IndianCardsContainer';
+import CardsContainer from '../utility/IndianCardsContainer';
 import IndiaMonthlyChart from './IndiaMonthlyChart'
 
 export default (props)=>{

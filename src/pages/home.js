@@ -1,8 +1,8 @@
 import React from 'react';
 import { Switch, Route} from 'react-router-dom';
-import Global from '../components/global';
-import India from '../components/india';
-import IndiaStateWise from '../components/indiastateWise';
+import Global from '../components/global/global';
+import India from '../components/india/india';
+import IndiaStateWise from '../components/statewise/indiastateWise';
 class Home extends React.Component{
     state={
         allTabs:['/', '/global', '/indiastatewise']

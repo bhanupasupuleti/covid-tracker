@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Select from './utility/select';
+import Select from '../utility/select';
 
 function CountrySelect({value,setCountry,options}){
     return(

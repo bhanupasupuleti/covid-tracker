@@ -2,9 +2,9 @@ import React, { useEffect,useState } from 'react';
 import{connect} from 'react-redux';
 import LinearProgress from '@material-ui/core/LinearProgress';
 
-import StateTable from './utility/table';
-import DistrictWise from './utility/DistrictWise'
-import {stateWiseData} from '../reducer/indiastatewise/actions'
+import StateTable from '../utility/table';
+import DistrictWise from '../utility/DistrictWise'
+import {stateWiseData} from '../../reducer/indiastatewise/actions'
 
 const IndiaStateWise=(props)=>{
     const [selectState, setselectState] = useState(["Andhra Pradesh", "ap"]);

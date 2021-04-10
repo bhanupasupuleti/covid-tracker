@@ -1,11 +1,11 @@
 import React,  { useState, useEffect }  from 'react';
 import { connect } from 'react-redux';
 
-import CardsContainer from './utility/GlobalCardsContainer';
-import CountrySelect from './CountrySelect';
-import Loader from './utility/loader';
+import CardsContainer from '../utility/GlobalCardsContainer';
+import CountrySelect from '../misc/CountrySelect';
+import Loader from '../utility/loader';
 import GlobalCharts from './globalCharts'
-import {globalData,getCountries,fetchDailyData} from '../reducer/global/actions'
+import {globalData,getCountries,fetchDailyData} from '../..//reducer/global/actions'
 
 const Global=(props)=>{
     const[country,setCountry]=useState('');

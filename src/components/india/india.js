@@ -1,11 +1,11 @@
 import React,  { useState, useEffect }  from 'react';
 import { connect } from 'react-redux';
-import Loader from './utility/loader';
 
-import Logs from './utility/logs';
-import {getIndiaData} from '../reducer/india/actions';
+import Loader from '../utility/loader';
+import Logs from '../utility/logs';
+import {getIndiaData} from '../../reducer/india/actions';
 import DailyData from './DailyData';
-import IndiaDailyChart from './indiaDailyChart'
+import IndiaDailyChart from '../statewise/indiaDailyChart'
 
 const India=(props)=>{
     useEffect(()=>{
