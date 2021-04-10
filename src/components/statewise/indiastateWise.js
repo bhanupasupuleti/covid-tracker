@@ -3,7 +3,7 @@ import{connect} from 'react-redux';
 import LinearProgress from '@material-ui/core/LinearProgress';
 
 import StateTable from '../utility/table';
-import DistrictWise from '../utility/DistrictWise'
+import DistrictWise from './DistrictWise'
 import {stateWiseData} from '../../reducer/indiastatewise/actions'
 
 const IndiaStateWise=(props)=>{

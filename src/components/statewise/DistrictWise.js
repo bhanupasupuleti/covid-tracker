@@ -9,7 +9,7 @@ import TableBody from '@material-ui/core/TableBody';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 
-import StateDailyData from "./stateDailyData";
+import StateDailyData from "../utility/stateDailyData";
 import {useStyles,StyledTableCell,StyledTableRowDistrict as StyledTableRow} from '../../shared/classes'
 
 const DistrictTable = (props) => {
@@ -44,7 +44,6 @@ const DistrictTable = (props) => {
 }
 
 const SimpleCard=({value,value2,time}) =>{
-    console.log(value,value2)
   const classes = useStyles();
   return (
     <div className={classes.cardRootStateConfirmed} >
@@ -84,7 +83,7 @@ const DistrictWise = ({
         (state) => state.state === selectState[0] && state.totaltested !== ""
       );
      let value= +totalTested.totaltested;
-        let value2=+totalTested.negative + +totalTested.unconfirmed
+    let value2=+totalTested.negative + +totalTested.unconfirmed
     return(
         <div className='districtCont'>
             <h2 style={{color:'#636262'}}>Stats for {selectState[0]}</h2>

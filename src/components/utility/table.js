@@ -25,8 +25,14 @@ const StateTable = (props) => {
         </TableHead>
         <TableBody>
           {stateWise.slice(0,stateWise.length-1).map((row,i) => (
-            <StyledTableRow key={row.state} onClick={() =>row.state === "Total"? null: setselectState([row.state,row.statecode.toLowerCase()])
-            }>
+            <StyledTableRow key={row.state} 
+                onClick={() =>
+                  {
+                  // console.log(row.statecode)
+                   return row.state === "Total"
+                   ? null
+                   : setselectState([row.state,row.statecode.toLowerCase()])
+                   }}>
               <StyledTableCell component="th" scope="row">
                  {row.state === "Total" ? "" : i}
               </StyledTableCell>
