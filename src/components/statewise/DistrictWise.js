@@ -16,8 +16,8 @@ const DistrictTable = (props) => {
   const {data}=props;
   const classes=useStyles()
   return (
-    <div className="Dist__Table-Container">  
-      <Table className={classes.table} aria-label="customized table">
+    <div className=" Table_container">  
+      <Table className={`${classes.table} Dist__Table-Container`} aria-label="customized table">
         <TableHead>
           <TableRow>
             <StyledTableCell>SNO</StyledTableCell>

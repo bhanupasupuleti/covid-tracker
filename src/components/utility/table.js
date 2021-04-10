@@ -10,9 +10,9 @@ const StateTable = (props) => {
   const {stateWise,setselectState}=props;
   const classes=useStyles()
   return (
-    <div className="state__Table-Container">
+    <div className='Table_container' >
       <h2 className='table-label'>State wise Data</h2>    
-      <Table className={classes.table} aria-label="customized table">
+      <Table className={`${classes.table} state__Table-Container`} aria-label="customized table">
         <TableHead>
           <TableRow>
             <StyledTableCell>SNO</StyledTableCell>

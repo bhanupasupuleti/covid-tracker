@@ -131,28 +131,34 @@ $color-header-primary:#bcd6db;
     margin: 2rem;
     padding: 1rem;
     display: flex;
-    .state__Table-Container{
+    .Table_container{
         width: 50%;
-        box-shadow: 0 0.5rem 1rem 0.2rem rgba(0, 0, 0, 0.2);
-        border-collapse: collapse;
         .table-label{
             color: rgb(99, 98, 98);
             text-align: center;
         }
+        .state__Table-Container{
+            width: 100%;
+            box-shadow: 0 0.5rem 1rem 0.2rem rgba(0, 0, 0, 0.2);
+            border-collapse: collapse;
+        }
+
     }
     .districtCont {
         width: 50%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin: 0rem 3rem;
+        margin: 0rem 5rem;
         .stategraph{
             width: 100%;
         }
-        .Dist__Table-Container{
+        .Table_container{
             width: 100%;
-            box-shadow: 0 0.5rem 1rem 0.2rem rgba(0, 0, 0, 0.2);
-            border-collapse: collapse;
+            .Dist__Table-Container{
+                box-shadow: 0 0.5rem 1rem 0.2rem rgba(0, 0, 0, 0.2);
+                border-collapse: collapse;
+            }
         }
         select {
                 border: none;
